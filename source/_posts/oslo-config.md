@@ -1,4 +1,4 @@
-title: OpenStack: oslo.config
+title: OpenStack - oslo.config
 date: 2014-10-19 22:20:57
 categories:
 - OpenStack
