@@ -42,7 +42,7 @@ $ sudo apt-get install -y mongodb-org
 
 我们要配置一个三个节点的Replication，如下所示：
 
-![main](/thumbnails/mongo-replica-test/1.png)
+![](/thumbnails/mongo-replica-test/1.png)
 
 #### 1.2.1 三个节点能相互通信，配置DNS。
 
@@ -250,7 +250,7 @@ rs1:PRIMARY>
 测试对Replica Set的基本连接，以及基本写操作，和Failover后的恢复操作，
 使用[pymongo](http://api.mongodb.org/python/current/examples/high_availability.html)
 
-![Failover](/thumbnails/mongo-replica-test/election.png)
+![](/thumbnails/mongo-replica-test/election.png)
 
 Connecting to a Replica Set
 
@@ -364,7 +364,7 @@ pymongo.errors.AutoReconnect: [Errno 111] Connection refused, [Errno 111] Connec
 
 根据[Write Concern for Replica Sets](http://docs.mongodb.org/manual/core/replica-set-write-concern/)的介绍：
 
-![WriteConcern](/thumbnails/mongo-replica-test/writeconcern.png)
+![](/thumbnails/mongo-replica-test/writeconcern.png)
 
 [pymongo write concern](http://api.mongodb.org/python/current/api/pymongo/database.html#pymongo.database.Database.write_concern)
 
