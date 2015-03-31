@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Peng Xiao' Blog
+title: McDull' Blog
 subtitle:
 description:
-author: Peng Xiao
-author_title: 'Python Developer'
+author: McDull
+author_title: 'Python Developer&Network Engineer'
 avatar: css/images/avatar.png
 location: 'Beijing, China'
 follow: https://github.com/xiaopeng163/
@@ -69,11 +69,11 @@ pagination_dir: page
 theme: icarus
 
 # Disqus
-disqus_shortname: xiaoquwl
+disqus_shortname: peng_xiao
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/ppoffice/ppoffice.github.io.git
+  repository: https://github.com/xiaopeng163/www.pythoner.io.git
   branch: master
