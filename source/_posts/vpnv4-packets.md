@@ -12,6 +12,8 @@ tags:
 
 ![](/thumbnails/vpnv4-packets/topo.png)
 
+source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/vpnv4-packets.md
+
 主要想看看数据包是怎么在MPLS VPNv4 Core Network中路由传播的，顺便抓个两层标签的数据包。实验拓扑如上。
 
 `AS 100`： `MPLS VPN`主干，通过`MP-BGP`传递`VPNv4`路由信息（其中`RR`反射`VPNv4`路由）。

@@ -9,6 +9,7 @@ tags:
 
 ![](/thumbnails/oslo-config/openstack.png)
 
+source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/oslo-config.md
 
 #### 参考资料
 

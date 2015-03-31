@@ -3,7 +3,7 @@
 ![](/thumbnails/about/1.png)
 
 
-Python码农一枚。
+Python码农一枚, 混迹在网络工程师圈多年。
 
 ### Contact
 
