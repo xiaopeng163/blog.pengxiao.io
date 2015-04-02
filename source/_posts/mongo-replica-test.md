@@ -240,6 +240,21 @@ rs1:PRIMARY>
 
 结果可以看到mongodb1是`PRIMARY`，其它两个host是`SECONDARY`。
 
+3) 删除member
+
+http://docs.mongodb.org/manual/tutorial/remove-replica-set-member/
+
+1. Shut down the mongod instance for the member you wish to remove. To shut down the instance, connect using the mongo shell and the `db.shutdownServer()` method.
+
+2. Connect to the replica set’s current primary. To determine the current primary, use `db.isMaster()` while connected to any member of the replica set.
+
+3. Use `rs.remove()` in either of the following forms to remove the member:
+```
+rs.remove("mongod3.example.net:27017")
+rs.remove("mongod3.example.net")
+```
+MongoDB disconnects the shell briefly as the replica set elects a new primary. The shell then automatically reconnects. The shell displays a DBClientCursor::init call() failed error even though the command succeeds.
+
 至此mongodb的配置完成了。
 
 
