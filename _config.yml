@@ -68,6 +68,10 @@ pagination_dir: page
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: icarus
 
+
+plugins:
+- hexo-generator-sitemap
+
 # Disqus
 disqus_shortname: httpwwwpythonerio
 
