@@ -7,7 +7,7 @@ tags:
 
 source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/install-go-from-source.md
 
-Try to install Go from source code, my test host is Ubuntu:
+Try to install Go from source code, my test host is Ubuntu.
 
 ```
 penxiao@pythoner:~$ lsb_release -a
@@ -18,7 +18,7 @@ Release:        14.04
 Codename:       trusty
 ```
 
-Because we need to use some tools to build Go, so we will install:
+Because we need to use some tools to build Go, so we will install.
 
 ```
 penxiao@pythoner:~$ sudo apt-get install bison ed gawk gcc libc6-dev make
@@ -68,7 +68,7 @@ penxiao@pythoner:~$
 ```
 
 
-Go helloworld!
+Go helloworld
 
 ```
 penxiao@pythoner:~/GoProjects/test$ more helloworld.go 
