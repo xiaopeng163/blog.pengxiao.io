@@ -4,15 +4,20 @@ categories:
 - Go
 tags:
 - Go
+---
+
+![](/thumbnails/install-go-from-source/1.png)
 
 source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/install-go-from-source.md
 
+## Setup Environment
+
 Try to install Go from source code, my test host is Ubuntu.
 
-```
+```bash
 penxiao@pythoner:~$ lsb_release -a
 No LSB modules are available.
-Distributor ID: Ubuntu
+Distributor ID:  Ubuntu
 Description:    Ubuntu 14.04.1 LTS
 Release:        14.04
 Codename:       trusty
@@ -32,6 +37,8 @@ export PATH=$PATH:$GOROOT/bin
 export GOPATH=$HOME/GoProjects
 ```
 
+## Install from source
+
 Download Go source and 
 
 ```
@@ -43,8 +50,9 @@ penxiao@pythoner:~/go/src$ ./all.bash
 
 and after you see this, congratulations.
 
-···
-# Checking API compatibility.
+```
+Checking API compatibility.
+
 Skipping cmd/api checks; hg not available
 
 real    0m1.240s
@@ -57,7 +65,7 @@ ALL TESTS PASSED
 Installed Go for linux/amd64 in /home/penxiao/go
 Installed commands in /home/penxiao/go/bin
 penxiao@pythoner:~/go/src$ 
-···
+```
 
 Check and test
 
