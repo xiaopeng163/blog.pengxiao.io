@@ -69,8 +69,7 @@ pagination_dir: page
 theme: icarus
 
 
-plugins:
-- hexo-generator-sitemap
+plugins: hexo-generator-sitemap
 
 # Disqus
 disqus_shortname: httpwwwpythonerio
