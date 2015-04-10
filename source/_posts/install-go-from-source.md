@@ -78,7 +78,7 @@ penxiao@pythoner:~$
 
 Go helloworld
 
-```
+```go
 penxiao@pythoner:~/GoProjects/test$ more helloworld.go 
 package main
 

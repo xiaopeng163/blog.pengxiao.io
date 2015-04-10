@@ -23,19 +23,19 @@ The type specifier [type] is optional, the compiler can implicitly derive the ty
 
 For example, 
 
-```
+```go
 const PORT int = 22
 ```
 
 is equal as:
 
-```
+```go
 const PORT = 22
 ```
 
 We can define many constants together through:
 
-```
+```go
 const (
 	BGP_FSM_IDLE        = 1
 	BGP_FSM_CONNECT     = 2
@@ -48,7 +48,7 @@ const (
 
 We can use `iota` to simplify this defination:
 
-```
+```go
 const (
 	_ = iota
 	BGP_FSM_IDLE
@@ -73,7 +73,7 @@ Variable can be defined as `var identifier [type] = value`, `type` is optional j
 
 well known type is `int`
 
-```
+```go
 var a int = 2
 ```
 
@@ -86,7 +86,7 @@ uint8, uint16, uint32, uint64.
 
 some example for int defination:
 
-```
+```go
 package main
 
 import "fmt"
@@ -114,7 +114,7 @@ func main(){
 
 The running results:
 
-```
+```go
 a is 1
 b is 2
 c is 3
@@ -131,7 +131,7 @@ Go.
 
 example:
 
-```
+```go
 package main
 
 import "fmt"
@@ -175,13 +175,13 @@ f is 6
 A boolean type represents the set of boolean truth values denoted by the predeclared
 constants `true` and `false`. The boolean type is `bool`.
 
-```
+```go
 var flag bool = false
 ```
 
 examples:
 
-```
+```go
 package main
 
 import "fmt"

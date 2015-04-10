@@ -13,7 +13,7 @@ source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/
 
 ## Hello World
 
-```
+```go
 $ more helloworld.go 
 package main
 

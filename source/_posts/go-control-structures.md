@@ -15,7 +15,7 @@ source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/
 
 The if else structure is like:
 
-```
+```go
 if condition1 {
     // do something
 } else if condition2 {
@@ -27,7 +27,7 @@ if condition1 {
 
 for example:
 
-```
+```go
 package main
 
 import "fmt"
@@ -46,7 +46,7 @@ func main(){
 
 ## switch case
 
-```
+```go
 package main
 
 import "fmt"
@@ -67,8 +67,6 @@ func Season(month int) string {
 }
 ```
 
-## select
-
 ## for 
 
 ### based on counter
@@ -77,7 +75,7 @@ The general format is: `for init; condition; modif { }`
 
 Example:
 
-```
+```go
 package main
 
 import "fmt"
@@ -90,7 +88,7 @@ func main() {
 }
 ```
 
-```
+```go
 package main
 
 import "fmt"
@@ -107,7 +105,7 @@ func main() {
 
 Just like `while` in the other languages, the general format: `for condition { }`
 
-```
+```go
 package main
 
 import "fmt"
@@ -128,7 +126,7 @@ func main(){
 like in `for i:=0; ; i++` or `for { }` (or for ;; { } but the ; ; is
 removed by gofmt): these are in fact infinite loops.
 
-```
+```go
 package main
 
 import "fmt"
@@ -159,7 +157,7 @@ for pos, char := range str {
 
 example:
 
-```
+```go
 package main
 
 import "fmt"
@@ -192,7 +190,7 @@ The position is 9, the char is d
 
 for `break`:
 
-```
+```go
 package main
 
 import "fmt"
@@ -214,7 +212,7 @@ func main(){
 
 for continue:
 
-```
+```go
 package main
 
 import "fmt"
