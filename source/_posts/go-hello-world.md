@@ -1,5 +1,5 @@
 title: Hello World for Go
-date: 2015-04-04
+date: 2014-04-04
 categories:
 - Go
 tags:

@@ -1,5 +1,5 @@
 title: Basic Variables and Constants in Go
-date: 2015-04-05
+date: 2014-04-05
 categories:
 - Go
 tags:
