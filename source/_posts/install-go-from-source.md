@@ -1,5 +1,5 @@
 title: Install Go from Source Code on Linux
-date: 2015-04-03
+date: 2014-04-03
 categories:
 - Go
 tags:
