@@ -101,3 +101,122 @@ Array item 3 is d
 
 ### Array Pointer
 
+Please see the example:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := [4]int{1, 2, 3, 4}
+	fmt.Printf("the pointer is %p\n", &a)
+	for i := 0; i < len(a); i++ {
+		fmt.Println(a[i])
+	}
+	test(a)
+}
+
+func test(b [4]int) {
+	fmt.Printf("the pointer is %p\n", &b)
+	for i := range b {
+		fmt.Println(b[i])
+	}
+}
+
+
+```
+
+The output is:
+
+```
+the pointer is 0xc0820065c0
+1
+2
+3
+4
+the pointer is 0xc082006620
+1
+2
+3
+4
+```
+
+We can see that the array value is the same, but they have different addresses. The reason is because we give the value
+to the function `test`, not the array's address, we can change to that:
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	a := [4]int{1, 2, 3, 4}
+	fmt.Printf("the pointer is %p\n", &a)
+	for i := 0; i < len(a); i++ {
+		fmt.Println(a[i])
+	}
+	test(&a)
+}
+
+func test(b *[4]int) {
+	fmt.Printf("the pointer is %p\n", b)
+	for i := range *b {
+		fmt.Println(b[i])
+	}
+}
+```
+
+And the output is:
+
+```
+the pointer is 0xc0820045c0
+1
+2
+3
+4
+the pointer is 0xc0820045c0
+1
+2
+3
+4
+```
+
+They have the same value and the same address
+
+### Multidimensional Array
+
+For example `[3][5]int`，`[2][2][2]string`
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	const (
+		X = 4
+		Y = 6
+	)
+
+	var a [4][6]int
+
+	for i := 0; i < X; i++ {
+		for j := 0; j < Y; j++ {
+			a[i][j] = i * j
+		}
+	}
+	fmt.Println(a)
+	fmt.Print(a[1][3])
+
+}
+```
+
+The output is:
+
+```
+[[0 0 0 0 0 0] [0 1 2 3 4 5] [0 2 4 6 8 10] [0 3 6 9 12 15]]
+3
+```
+
+Done!
