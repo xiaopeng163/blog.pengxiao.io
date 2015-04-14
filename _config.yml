@@ -13,6 +13,7 @@ location: 'Beijing, China'
 follow: https://github.com/xiaopeng163/
 language: en
 timezone:
+pagination: 10
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
