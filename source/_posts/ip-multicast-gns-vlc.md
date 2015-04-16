@@ -9,9 +9,11 @@ tags:
 - Multicast
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/ip-multicast-gns-vlc.md
+source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/ip-multicast-gns-vlc.md 
 
-GNS3提供的这个组播实验是非常好的http://www.anandnetwork.com/2011/11/multicast-testing-with-vlc-media-player.html。前些日子看了些组播的东西，虽然都会详细的去讲IGMP,PIM等，但没有source和receiver，不能称其为一个完整的组播系统，因而就很难去实际分析组播数据流到底是怎么在组播系统中转发的，而source和receiver是实际应用，不管是GNS3或者是IOU、IOL都模拟不了。而上面那个实验，解决了这个问题。
+GNS3提供的这个组播实验是非常好的http://www.anandnetwork.com/2011/11/multicast-testing-with-vlc-media-player.html
+
+前些日子看了些组播的东西，虽然都会详细的去讲IGMP,PIM等，但没有source和receiver，不能称其为一个完整的组播系统，因而就很难去实际分析组播数据流到底是怎么在组播系统中转发的，而source和receiver是实际应用，不管是GNS3或者是IOU、IOL都模拟不了。而上面那个实验，解决了这个问题。
  
 唯一不足之处：发送的是视频流太大，抓包太多，不便于分析。其实我只想让source每隔T秒重复发送一个单词Cisco，然后能在多个receiver上收到即可，这个后面可以想想办法。说不定用Python就可以实现，那就不用VLC了http://chaos.weblogs.us/archives/164
  
