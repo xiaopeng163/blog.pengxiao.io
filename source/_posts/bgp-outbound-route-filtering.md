@@ -1,4 +1,4 @@
-title: Trace Packets in MPLS VPNv4 Network
+title: BGP Outbound Route Filtering
 date: 2012-10-21
 categories:
 - Cisco
