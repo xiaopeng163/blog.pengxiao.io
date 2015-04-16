@@ -1,4 +1,4 @@
-title: IP Multicast: GNS3+VLC模拟组播视频应用
+title: IP Multicast - GNS3+VLC 
 date: 2012-11-26
 categories:
 - Cisco
