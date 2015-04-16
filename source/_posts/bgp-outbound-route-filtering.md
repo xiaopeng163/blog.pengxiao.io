@@ -1,5 +1,5 @@
 title: Trace Packets in MPLS VPNv4 Network
-date: 2012-10-07
+date: 2012-10-21
 categories:
 - Cisco
 - CCIE
@@ -19,7 +19,7 @@ http://blog.ine.com/2008/05/05/understanding-bgp-outbound-route-filtering-bgp-or
 
 搭了一个简单的拓扑：其中CE模拟客户路由器，PE上以回环口模拟路由发往CE，PE和CE之间实现ORF
 
-![](/thumbnails/bgp-outbound-route-filtering/1.png
+![](/thumbnails/bgp-outbound-route-filtering/1.png)
 
 配置命令其实很简单。
 
@@ -56,11 +56,11 @@ ip prefix-list AS_100_IN seq 5 permit 192.168.2.0/24
 
 CE发给PE：
 
-![](/thumbnails/bgp-outbound-route-filtering/2.jpg
+![](/thumbnails/bgp-outbound-route-filtering/2.jpg)
 
 PE发给CE：
 
-![](/thumbnails/bgp-outbound-route-filtering/3.jpg
+![](/thumbnails/bgp-outbound-route-filtering/3.jpg)
 
 （2）通过route refresh message来携带ORF的entry。
 
@@ -68,11 +68,11 @@ RFC中规定的格式为：
 
 下面是携带了ORF的BGP route refresh message：
 
-![](/thumbnails/bgp-outbound-route-filtering/4.png
+![](/thumbnails/bgp-outbound-route-filtering/4.png)
 
 下面是具体一个entry的格式：
 
-![](/thumbnails/bgp-outbound-route-filtering/5.png
+![](/thumbnails/bgp-outbound-route-filtering/5.png)
 
 可以看到第一个字节分3部分：
 
@@ -84,10 +84,10 @@ RFC中规定的格式为：
 
 下面是Cisco ORF的包结构
 
-![](/thumbnails/bgp-outbound-route-filtering/6.jpg
+![](/thumbnails/bgp-outbound-route-filtering/6.jpg)
 
 最后是由此ORF产生的Update结果
 
-![](/thumbnails/bgp-outbound-route-filtering/7.jpg
+![](/thumbnails/bgp-outbound-route-filtering/7.jpg)
 
 具体的Operation还是要参考RFC5291
