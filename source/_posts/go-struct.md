@@ -6,9 +6,9 @@ tags:
 - Go
 ---
 
-![](/thumbnails/install-go-from-source/1.png)
-
 source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/go-struct.md
+
+### The Basic
 
 Go does not have a concept of class, but it has `struct`. A struct is just like a simple class which only contain values.
 
@@ -47,4 +47,8 @@ The output is:
 {0 0}
 {1 2}
 ```
+
+We can also use `new` to create a new struct var: replace `a := Position()` with `a := new(Position)`
+
+### Method
 
