@@ -23,7 +23,7 @@ Please do not set `charset` to utf8!
 
 (3) create user: `useradd gerrit2`
 
-2. 安装
+### 2. Install
 
 (1) Create a new folder， `/home/gerrit2/gerrit/`
 
