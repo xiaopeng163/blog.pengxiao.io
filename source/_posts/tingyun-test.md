@@ -7,8 +7,18 @@ tags:
 - test
 ---
 
+source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/tingyun-test.md
 
-Django作为Python语言中最为流行的Web框架，受到越来越多的开发者欢迎。互联网上基于Django的站点越来越多。如何去监控Django应用是目前大家普遍关心的一个问题，Django应用经常会用到像Mongodb这样的NOSQL数据库来做后台存储，以及Memcached作缓存。本文将会试着搭建一个完整的Django应用并尝试去监控其性能。
+Django作为Python语言中最为流行的Web框架，受到越来越多的开发者欢迎。互联网上基于Django的站点越来越多。
+如何去监控Django应用是目前大家普遍关心的一个问题，Django应用经常会用到像Mongodb这样的NOSQL数据库来做后台存储，以及Memcached作缓存。
+
+对于应用级别的监控，很多地方不同于传统的设备和网络监控，大家比较熟悉的协议就是SNMP,比较熟悉的工具比如ZABBIX。传统的这种监控架构,
+安装配置和部署都都很复杂,但是绝大部分监控系统的架构原理大同小异，无非就是agent+server的模式.
+在应用级别的监控中，对于Web性能的监控是很重要的一块内容，Google search `web performance test`会出来很多结果。
+
+could现在是非常火的，看看`OpenStack`就知道了。任何一种服务都想和云沾上边，提供云服务，监控也不例外，当然云服务有很多的优势，这里不多讲。
+
+听云是国内较大的一个应用性能监控云平台。其详细介绍可以参考百度百科[http://baike.baidu.com/view/14213481.htm](http://baike.baidu.com/view/14213481.htm)。本文会以听云为例，来尝试监控Django服务的应用性能。
 
 # Django
 
@@ -156,14 +166,17 @@ $ tail -f /tmp/tingyun-agent.log
 
 探针会尝试与听云服务器建立连接，然后上传监控数据。
 
-整个应用的拓扑：
-![topo](https://static.oschina.net/uploads/img/201509/06211402_KPR5.png "整个应用拓扑")
+应用拓扑：
+所谓应用拓扑借用了网络拓扑的概念，这里的节点就是应用，线就是应用之间的调用关系
+![topo](https://static.oschina.net/uploads/img/201509/06232019_kbjk.png)
 
-一些web监控数据：
+在情报汇总页面里给出了一些基本监控数据的汇总显示，下面举例说明：
 
-![输入图片说明](https://static.oschina.net/uploads/img/201509/06211521_FKlF.png "在这里输入图片标题")
+应用服务器响应时间画出了当前几个应用的响应时间。
+![](https://static.oschina.net/uploads/img/201509/06232858_dasD.png)
 
-![输入图片说明](https://static.oschina.net/uploads/img/201509/06211729_nuA5.png "在这里输入图片标题")
+Apdex指标
+![Apdex指标](https://static.oschina.net/uploads/img/201509/06233431_AAyO.png)
 
 ![输入图片说明](https://static.oschina.net/uploads/img/201509/06211902_Quf2.png "在这里输入图片标题")
 
@@ -185,7 +198,10 @@ $ tail -f /tmp/tingyun-agent.log
 
 # 总结
 
-总体来说，虽然处于测试阶段，听云的这种基于云的应用监控服务做的还是不错的，所提供的数据对于我们了解自己的应用的运行情况起到了很大得帮助。笔者并没有全部展现其功能，更多的细节有待日后挖掘，感兴趣的童鞋可以阅读其Python探针的源码，来了解其背后的原理和过程。
+总体来说，虽然处于测试阶段，听云的这种基于云的应用监控服务做的还是不错的，所提供的数据对于我们了解自己的应用的运行情况起到了很大得帮助。
+笔者并没有全部展现其功能，更多的细节有待日后挖掘，感兴趣的童鞋可以阅读其Python探针的源码，来了解其背后的原理和过程。
+
+对于界面操作,有一个问题就是只能禁用而不能删除监控的应用,这个期望后期能做出改善.
 
 # 参考资料：
 
