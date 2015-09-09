@@ -7,16 +7,17 @@ tags:
 - test
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/tingyun-test.md
+source:https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/tingyun-test.md
 
-Django作为Python语言中最为流行的Web框架，受到越来越多的开发者欢迎。互联网上基于Django的站点越来越多。
-如何去监控Django应用是目前大家普遍关心的一个问题，Django应用经常会用到像Mongodb这样的NOSQL数据库来做后台存储，以及Memcached作缓存。
+Django作为Python语言中最为流行的Web框架，受到越来越多的开发者欢迎。互联网上基于Django的站点越来越多,像[Disqus](https://disqus.com), [Bitbucket](https://bitbucket.org/)
+如何去监控Django应用是目前大家普遍关心的一个问题，并且Django作为一个Web框架,经常会用到像Mongodb这样的NOSQL数据库来做后台存储，以及Memcached作缓存。作为一个完整的前后台应用,如何去
+监控其整体性能,也是一个问题.
 
-对于应用级别的监控，很多地方不同于传统的设备和网络监控，大家比较熟悉的协议就是SNMP,比较熟悉的工具比如ZABBIX。传统的这种监控架构,
-安装配置和部署都都很复杂,但是绝大部分监控系统的架构原理大同小异，无非就是agent+server的模式.
+对于应用级别的监控，很多地方不同于传统的设备和网络监控，大家比较熟悉的协议就是SNMP,比较熟悉的工具比如ZABBIX。传统的这种监控架构, 安装配置和部署都都很复杂,但是绝大部分监控系统的架构原理大同小异，无非就是agent+server的模式.
+
 在应用级别的监控中，对于Web性能的监控是很重要的一块内容，Google search `web performance test`会出来很多结果。
 
-could现在是非常火的，看看`OpenStack`就知道了。任何一种服务都想和云沾上边，提供云服务，监控也不例外，当然云服务有很多的优势，这里不多讲。
+Could现在是非常火的，看看`OpenStack`就知道了。任何一种服务都想和云沾上边，提供云服务，监控也不例外，国外已有不少成熟的产品, 当然云服务有很多的优势，这里不多讲。
 
 听云是国内较大的一个应用性能监控云平台。其详细介绍可以参考百度百科[http://baike.baidu.com/view/14213481.htm](http://baike.baidu.com/view/14213481.htm)。本文会以听云为例，来尝试监控Django服务的应用性能。
 
@@ -162,6 +163,8 @@ $ tail -f /tmp/tingyun-agent.log
 2015-09-06 19:43:38,671 (14365/Dummy-1) tingyun.embattle.inspection 144 INFO - Detect hooker tingyun.armoury.database_mongo for target module <module 'pymongo.connection' from '/usr/local/lib/python2.7/dist-packages/pymongo/connection.pyc'>
 ```
 
+程序的配置文件在`/tmp/tingyun.ini`, 可以修改配置.
+
 ## 查看监控结果
 
 探针会尝试与听云服务器建立连接，然后上传监控数据。
@@ -176,32 +179,53 @@ $ tail -f /tmp/tingyun-agent.log
 ![](https://static.oschina.net/uploads/img/201509/06232858_dasD.png)
 
 Apdex指标
-![Apdex指标](https://static.oschina.net/uploads/img/201509/06233431_AAyO.png)
+什么是Apdex? [Apdex](https://en.wikipedia.org/wiki/Apdex)是Application Performance Index的简称.
+是一个由众多网络分析技术公司和测量工业组成的联盟组织联合起来开发的. Apdex用一句话来概括，就是用户对应用性能满意度的量化值。
+它提供了一个统一的测量和报告用户体验的方法，第一次把最终用户的体验和应用性能联系在了一起。具体内容请参考维基百科.
 
-![输入图片说明](https://static.oschina.net/uploads/img/201509/06211902_Quf2.png "在这里输入图片标题")
+如图所示, 1代表了所有用户都满意,因为所有的访问都是成功的, 容忍样本和失望样本都是0. 所以总的Apdex指数就是1.
+
+![Apdex指标](https://static.oschina.net/uploads/img/201509/06233431_AAyO.png)
+![Apdex full](https://static.oschina.net/uploads/img/201509/09085531_GQ4L.png)
+
+响应时间和吞吐率. 坐标纵轴左边rpm代表吞吐量,右边代表响应时间.
+![响应时间和吞吐率](https://static.oschina.net/uploads/img/201509/06211902_Quf2.png)
 
 一些数据库的监控数据
 
-![输入图片说明](https://static.oschina.net/uploads/img/201509/06212201_WRAi.png "在这里输入图片标题")
+最耗时的SQL操作.
+![SQL](https://static.oschina.net/uploads/img/201509/06212201_WRAi.png "在这里输入图片标题")
 
 ![输入图片说明](https://static.oschina.net/uploads/img/201509/06212220_SFMe.png "在这里输入图片标题")
 
 ![输入图片说明](https://static.oschina.net/uploads/img/201509/06212241_Idxv.png "在这里输入图片标题")
 
+下面是对于mongodb和Memcached的吞吐率堆叠图.
 ![输入图片说明](https://static.oschina.net/uploads/img/201509/06212405_vP12.png "在这里输入图片标题")
 
-![输入图片说明](https://static.oschina.net/uploads/img/201509/06212425_GQaw.png "在这里输入图片标题")
+![输入图片说明](https://static.oschina.net/uploads/img/201509/06212425_GQaw.png)
 
 对于服务器资源的监控
 
-![输入图片说明](https://static.oschina.net/uploads/img/201509/06212710_omgU.png "在这里输入图片标题")
+听云也提供了对服务器CPU和内存等资源的监控, 这些是传统网络和设备监控的内容,把它们放到应用监控里,对于我们了解应用对物理资源的占用情况提供了数据
+支撑.
+![输入图片说明](https://static.oschina.net/uploads/img/201509/06212710_omgU.png)
 
-# 总结
+对于Web应用过程的监控
+
+这个对于web执行的过程分析非常有帮助,会帮你列出来哪些代码调用是费时的,它的性能,调用次数等等.
+![web](https://static.oschina.net/uploads/img/201509/09085356_7VVV.png)
+
+# 总结和建议
 
 总体来说，虽然处于测试阶段，听云的这种基于云的应用监控服务做的还是不错的，所提供的数据对于我们了解自己的应用的运行情况起到了很大得帮助。
-笔者并没有全部展现其功能，更多的细节有待日后挖掘，感兴趣的童鞋可以阅读其Python探针的源码，来了解其背后的原理和过程。
+笔者并没有全部展现其功能，更多的细节有待日后挖掘，特别是各个监控数据是如何取到的. 感兴趣的童鞋可以阅读其Python探针的源码，来了解其背后的原理和过程。
 
-对于界面操作,有一个问题就是只能禁用而不能删除监控的应用,这个期望后期能做出改善.
+意见建议:
+
+- 对于界面操作,有一个问题就是只能禁用而不能删除监控的应用,这个期望后期能做出改善.
+- 另外对于服务器资源的监控已经涉及到CPU和内存.那么对于我们的Django服务上线对外提供服务以后,对服务器网卡设备IO,硬盘容量/IO等的监控也是非常重要的内容.
+- agent-server的云模式对于部分的企业网存在访问限制的问题,虽然我们有https的加密传输,但是部分企业网会限制内网数据向外网传输,说白了,就是对于安全性的顾虑,看看听云是否有解决方案.
 
 # 参考资料：
 
