@@ -1,12 +1,12 @@
-title: Go Struct
-date: 2014-05-01
+title: Go Struct - 1
+date: 2016-05-01
 categories:
 - Go
 tags:
 - Go
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/go-struct.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/go-struct.md
 
 ### The Basic
 
@@ -24,31 +24,36 @@ type identifier struct{
 For example:
 
 ```go
-package main
-
-import "fmt"
-
-type Position struct {
-	X int
-	Y int
-}
-
-func main() {
-	a := Position{}
-	fmt.Println(a)
-	a.X = 1
-	a.Y = 2
-	fmt.Println(a)
+type Person struct {
+	Name string
+	Age int
 }
 ```
 
-The output is:
+### Initialization
+
+We can create an instance of our new Person type in a variety of ways:
+
+```go
+var p Person
 ```
-{0 0}
-{1 2}
+
+This will create a local `Person` variable called `p`, and with a default zero value. For a struct zero means each of the fields is set to their corresponding zero value (0 for ints, 0.0 for floats, "" for strings, nil for pointers, …)
+
+We can also use the new function:
+
+```go
+p := new(Person)
 ```
 
-We can also use `new` to create a new struct var: replace `a := Position()` with `a := new(Position)`
+This allocates memory for all the fields, sets each of them to their zero value and returns a pointer. More often we want to give each of the fields a value. We can do this in two ways. Like this:
 
-### Method
+```go
+p := Person{Name: "Jim", Age: 21}
+```
 
+Or we can leave off the field names if we know the order they were defined:
+
+```go
+c := Person{"Jim", 21}
+```
