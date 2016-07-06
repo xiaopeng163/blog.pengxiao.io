@@ -14,7 +14,7 @@ pagination: 20 # each page only show 10 posts
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.pythoner.io
+url: http://www.pengxiao.me
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -70,11 +70,11 @@ theme: jacman
 plugins: hexo-generator-sitemap
 
 # Disqus
-disqus_shortname: httpwwwpythonerio
+disqus_shortname: httpwwwpengxiaome
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/xiaopeng163/www.pythoner.io.git
+  repository: https://github.com/xiaopeng163/www.pengxiao.me.git
   branch: master
