@@ -64,7 +64,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: hjttps://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: jacman
+theme: next
 
 
 plugins: hexo-generator-sitemap
