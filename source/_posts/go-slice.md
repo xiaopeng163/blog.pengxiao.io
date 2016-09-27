@@ -8,7 +8,7 @@ tags:
 
 ![](/thumbnails/install-go-from-source/1.png)
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/go-slice.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/go-slice.md
 
 A slice is a reference to a contiguous segment(section) of an array. This section can be the entire array, or a subset of the
 items indicated by a start- and an end index.

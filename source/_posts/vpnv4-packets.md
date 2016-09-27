@@ -12,7 +12,7 @@ tags:
 
 ![](/thumbnails/vpnv4-packets/topo.png)
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/vpnv4-packets.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/vpnv4-packets.md
 
 主要想看看数据包是怎么在MPLS VPNv4 Core Network中路由传播的，顺便抓个两层标签的数据包。实验拓扑如上。
 

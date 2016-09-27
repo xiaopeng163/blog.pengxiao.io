@@ -7,7 +7,7 @@ tags:
 - Flask
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/flask-auto-doc-api.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/flask-auto-doc-api.md
 
 
 http://pythonhosted.org/sphinxcontrib-httpdomain/#module-sphinxcontrib.autohttp.flask

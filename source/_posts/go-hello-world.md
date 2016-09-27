@@ -8,7 +8,7 @@ tags:
 
 ![](/thumbnails/install-go-from-source/1.png)
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/go-hello-world.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/go-hello-world.md
 
 
 ## Hello World

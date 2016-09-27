@@ -7,7 +7,7 @@ tags:
 - test
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/mongo-replica-test.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/mongo-replica-test.md
 
 ## 1 实验环境搭建
 

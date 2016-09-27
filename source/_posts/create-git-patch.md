@@ -7,7 +7,7 @@ tags:
 - Linux
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/create-git-patch.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/create-git-patch.md
 
 #### Clone repository
 ``` bash

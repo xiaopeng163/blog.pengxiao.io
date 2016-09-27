@@ -10,7 +10,7 @@ tags:
 
 ![](/thumbnails/gre-vxlan-openvswitch/1.png)
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/gre-vxlan-openvswitch.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/gre-vxlan-openvswitch.md
 
 试了下OVS的一些隧道封装功能（GRE，VXLAN）。
 

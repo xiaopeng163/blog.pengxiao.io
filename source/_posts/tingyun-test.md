@@ -7,7 +7,7 @@ tags:
 - test
 ---
 
-source:https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/tingyun-test.md
+source:https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/tingyun-test.md
 
 Django作为Python语言中最为流行的Web框架，受到越来越多的开发者欢迎。互联网上基于Django的站点越来越多,像[Disqus](https://disqus.com), [Bitbucket](https://bitbucket.org/)
 如何去监控Django应用是目前大家普遍关心的一个问题，并且Django作为一个Web框架,经常会用到像Mongodb这样的NOSQL数据库来做后台存储，以及Memcached作缓存。作为一个完整的前后台应用,如何去

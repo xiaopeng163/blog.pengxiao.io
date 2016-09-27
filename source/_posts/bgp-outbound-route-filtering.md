@@ -9,7 +9,7 @@ tags:
 - BGP
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/bgp-outbound-route-filtering.md
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/bgp-outbound-route-filtering.md
 
 Reference RFC 5291
 

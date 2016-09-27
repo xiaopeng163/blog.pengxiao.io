@@ -9,7 +9,7 @@ tags:
 - Multicast
 ---
 
-source https://github.com/xiaopeng163/www.pythoner.io/blob/master/source/_posts/ip-multicast-gns-vlc.md 
+source https://github.com/xiaopeng163/www.pengxiao.me/blob/master/source/_posts/ip-multicast-gns-vlc.md 
 
 GNS3提供的这个组播实验是非常好的http://www.anandnetwork.com/2011/11/multicast-testing-with-vlc-media-player.html
 
