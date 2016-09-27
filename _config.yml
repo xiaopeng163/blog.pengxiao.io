@@ -4,13 +4,17 @@
 
 # Site
 title: Peng Xiao' Blog
-subtitle:
+subtitle: Stay Hungry. Stay Foolish
 description:
 author: Peng Xiao
 avatar: css/images/avatar.png
 language: en
 timezone:
-pagination: 20 # each page only show 10 posts
+pagination: 80 # each page only show 10 posts
+
+profile:
+    location: Beijing, China
+    github: xiaopeng163
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -64,13 +68,15 @@ pagination_dir: page
 # Extensions
 ## Plugins: hjttps://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: next
+theme: hexo-theme-primer
 
 
 plugins: hexo-generator-sitemap
 
-# Disqus
-disqus_shortname: httpwwwpengxiaome
+excerpt_link: Continue Reading
+
+comments:
+	disqus_shortname: httpwwwpengxiaome
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
