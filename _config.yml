@@ -1,5 +1,5 @@
 # Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
+## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
@@ -10,7 +10,7 @@ author: Peng Xiao
 avatar: css/images/avatar.png
 language: en
 timezone:
-pagination: 80 # each page only show 10 posts
+pagination: 10 # each page only show 10 posts
 
 profile:
     location: Beijing, China
@@ -18,7 +18,7 @@ profile:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.pengxiao.me
+url: http://blog.pengxiao.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -46,8 +46,18 @@ future: true
 highlight:
   enable: true
   line_number: true
+  auto_detect: false
   tab_replace:
-
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -66,21 +76,11 @@ per_page: 10
 pagination_dir: page
 
 # Extensions
-## Plugins: hjttps://github.com/hexojs/hexo/wiki/Plugins
-## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: hexo-theme-primer
-
-
-plugins: hexo-generator-sitemap
-
-excerpt_link: Continue Reading
-
-comments:
-	disqus_shortname: httpwwwpengxiaome
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: next
 
 # Deployment
-## Docs: http://hexo.io/docs/deployment.html
+## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://github.com/xiaopeng163/www.pengxiao.me.git
-  branch: master
+  type:
